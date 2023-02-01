@@ -15,5 +15,8 @@ class ApplicationController < ActionController::Base
   
   def test4
   end
-  
+
+  def test5
+
+  end
 end

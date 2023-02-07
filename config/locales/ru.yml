@@ -9,7 +9,7 @@ ru:
       depilation: 'Женская депиляция'
       admin_user: 'Администраторы'
       comment: 'Комментарии'
-      
+
     attributes:
       man_hair_cut:
         title: "Название"
@@ -29,7 +29,7 @@ ru:
 
       depilation:
         title: "Название"
-        price: "цена"
+        price: "Цена"
 
       women_hair_cut:
         title: 'Название'

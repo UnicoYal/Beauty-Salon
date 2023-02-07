@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,200&display=swap');
+
+$primary-color: #093725;
+$secondary-color: #17d360;
+
+body {
+  background: #131313;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  color: white
+}
+
+.services {
+  display: flex;
+  margin: 10%;
+  border: $primary-color solid;
+  border-radius: 30px;
+  position: relative;
+  padding: 8% 0 8% 8%;
+  justify-content: center;
+  box-shadow: 0 10px 50px -30px white;
+  &:after {
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    inset: 0;
+    opacity: .1;
+    background: linear-gradient(45deg,$secondary-color, #131313, $secondary-color);
+  }
+  * {
+    z-index: 1;
+  }
+}
+.services__header {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100px - 10%);
+  padding-right: 10%;
+  border-right: 2px solid $primary-color;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: calc(100% - 1px);
+    margin-top: 1px;
+    right: -20px;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+  }
+}
+.services__content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(50% + 50px);
+  width: 100%;
+  justify-items: center;
+}
+.services__line {
+  display: flex;
+  gap: 30%;
+  min-width: 500px;
+}
+.services__man {
+  padding-left: 24%;
+  width: 40%;
+  transition: .3s ease-in-out;
+  &:hover {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+.price {
+  color: $secondary-color;
+  padding-right: 10%;
+}
+.service__type {
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+
+  &:hover {
+    border: 1px $secondary-color solid;
+    border-radius: 1px;
+    animation: circle__custom ease-in-out 1.5s;
+  }
+  &:focus {
+    border: 1px $secondary-color solid;
+    border-radius: 1px;
+  }
+
+}
+
+@keyframes circle__custom {
+  from {
+    border: 1px solid transparent;
+    border-radius: 1px;
+  }
+  25% {
+    border-top: 1px $secondary-color solid;
+    border-radius: 1px;
+  }
+  50% {
+    border-top: 1px $secondary-color solid;
+    border-right: 1px $secondary-color solid;
+    border-radius: 1px;
+  }
+  75% {
+    border-top: 1px $secondary-color solid;
+    border-right: 1px $secondary-color solid;
+    border-bottom: 1px $secondary-color solid;
+    border-radius: 1px;
+  }
+  100% {
+    border: 1px $secondary-color solid;
+    border-radius: 1px;
+  }
+}

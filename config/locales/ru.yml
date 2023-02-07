@@ -1,0 +1,46 @@
+ru:  
+  activerecord:
+    models:
+      man_hair_cut: 'Мужской зал'
+      women_hair_cut: 'Женский зал'
+      pedicure: 'Педикюр'
+      manicure: 'Маникюр'
+      makeup: 'Макияж'
+      depilation: 'Женская депиляция'
+      admin_user: 'Администраторы'
+      comment: 'Комментарии'
+      
+    attributes:
+      man_hair_cut:
+        title: "Название"
+        price: "Цена"
+      
+      pedicure:
+        title: "Название"
+        price: "Цена"
+      
+      manicure:
+        title: "Название"
+        price: "Цена"
+
+      makeup:
+        title: "Название"
+        price: "Цена"
+
+      depilation:
+        title: "Название"
+        price: "цена"
+
+      women_hair_cut:
+        title: 'Название'
+        price_lower_ten: 'До 10 см'
+        price_ten_to_twenty: "От 10 до 20 см"
+        price_upper_twenty: 'От 20 см'
+
+      admin_user:
+        email: "Почта"
+        encrypted_password: "Пароль"
+        reset_password_token: "Сбросить пароль"
+        created_at: "Созданно"
+        current_sign_in_at: ''
+        sign_in_count: ''

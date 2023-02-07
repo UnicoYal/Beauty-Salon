@@ -15,3 +15,7 @@
  */
 
 @import "page.scss";
+.yandex_map {
+    height: 700px;
+    margin-bottom: 0.8em;
+}

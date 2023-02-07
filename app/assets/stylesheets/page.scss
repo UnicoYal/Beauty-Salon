@@ -2,45 +2,84 @@
 
 $primary-color: #093725;
 $secondary-color: #17d360;
+$starbucks-color: #016341;
+$test-btn-color: #016341;
+$brown-theme-color: #2f1b11;
+
 
 body {
-  background: #131313;
+  background: #fff;
+  padding: 0;
+  margin: 0;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 * {
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
-  color: white
+}
+
+.circle {
+  position: absolute;
+  left: -50vmin;
+  top: calc(-40vmin);
+  border-radius: 30% 40% 50% 60%;
+  width: 100vmin;
+  height: 100vmin;
+  background: $starbucks-color;
+  &:after {
+    content: "";
+    background: $primary-color;
+    position: inherit;
+    border-radius: inherit;
+    right: -180vmin;
+    bottom: -180vmin;
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.services_section {
+  display: block;
+  padding: 1vh 0;
+  width: 100%;
+  background: #fff;
+  z-index: -3;
 }
 
 .services {
   display: flex;
   margin: 10%;
-  border: $primary-color solid;
+  border: 1px $starbucks-color solid;
   border-radius: 30px;
   position: relative;
+  font-family: inherit;
+  max-width: 100%;
   padding: 8% 0 8% 8%;
-  justify-content: center;
-  box-shadow: 0 10px 50px -30px white;
+  //justify-content: center;
+  box-shadow: 0 20px 50px -20px black;
   &:after {
     content: "";
     position: absolute;
     border-radius: 30px;
     inset: 0;
-    opacity: .1;
-    background: linear-gradient(45deg,$secondary-color, #131313, $secondary-color);
+    opacity: .5;
+    background: white
   }
   * {
-    z-index: 1;
+    z-index: 4;
   }
 }
 .services__header {
   display: flex;
+  font-family: 'Raleway', sans-serif;
   flex-direction: column;
-  gap: calc(100px - 10%);
+  color: $starbucks-color;
+  gap: 100px;
   padding-right: 10%;
   border-right: 2px solid $primary-color;
   position: relative;
@@ -53,47 +92,59 @@ body {
     right: -20px;
     justify-content: center;
     align-items: center;
-    background: $secondary-color;
+    background: $starbucks-color;
   }
 }
 .services__content {
   display: flex;
+  font-family: 'Raleway', sans-serif;
+  color: $starbucks-color;
   flex-direction: column;
   gap: calc(50% + 50px);
   width: 100%;
-  justify-items: center;
+  //justify-items: center;
 }
 .services__line {
   display: flex;
-  gap: 30%;
+  gap: 10vw;
   min-width: 500px;
+  //justify-content: center;
+  align-items: center;
 }
 .services__man {
   padding-left: 24%;
   width: 40%;
   transition: .3s ease-in-out;
+  font-weight: 900;
   &:hover {
-    font-size: 16px;
+    color: black;
     cursor: pointer;
   }
 }
 .price {
-  color: $secondary-color;
-  padding-right: 10%;
+  color: $starbucks-color;
+  //padding-right: 10%;
+  text-align: center;
+  font-weight: 900;
+
 }
 .service__type {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   cursor: pointer;
+  color: $test-btn-color;
+  font-weight: 900;
   padding: 10px;
   background: none;
 
   &:hover {
-    border: 1px $secondary-color solid;
+    border: 2px $test-btn-color solid;
+    outline: none;
     border-radius: 1px;
+    background: none;
     animation: circle__custom ease-in-out 1.5s;
   }
   &:focus {
-    border: 1px $secondary-color solid;
+    border: 2px $test-btn-color solid;
     border-radius: 1px;
   }
 
@@ -101,27 +152,32 @@ body {
 
 @keyframes circle__custom {
   from {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 1px;
+    background: none;
   }
   25% {
-    border-top: 1px $secondary-color solid;
+    border-top: 2px $test-btn-color solid;
     border-radius: 1px;
+    background: none;
   }
   50% {
-    border-top: 1px $secondary-color solid;
-    border-right: 1px $secondary-color solid;
+    border-top: 2px $test-btn-color solid;
+    border-right: 2px $test-btn-color solid;
     border-radius: 1px;
+    background: none;
   }
   75% {
-    border-top: 1px $secondary-color solid;
-    border-right: 1px $secondary-color solid;
-    border-bottom: 1px $secondary-color solid;
+    border-top: 2px $test-btn-color solid;
+    border-right: 2px $test-btn-color solid;
+    border-bottom: 2px $test-btn-color solid;
     border-radius: 1px;
+    background: none;
   }
   100% {
-    border: 1px $secondary-color solid;
+    border: 2px $test-btn-color solid;
     border-radius: 1px;
+    background: none;
   }
 }
 

@@ -242,7 +242,7 @@ body {
 }
 
 .promo-text {
-  width: 100vw;
+  width: 50vw;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -263,11 +263,26 @@ body {
 }
 
 .promo-text .promo-common-text, .promo-rolano {
-  font-size: 4vw;
+  font-size: 3.7vw;
   color: $starbucks-color;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
+
+.promo-common-text{
+  padding-left: 5%;
+  &:after {
+    position: absolute;
+    content: "";
+    right: 10vw;
+    top: 15vh;
+    background-size: cover;
+    background-image: url("girl1.png");
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
 
 .promo-rolano {
 

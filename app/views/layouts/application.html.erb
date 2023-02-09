@@ -6,9 +6,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script>
-      const scroll_to_services = () => {
-          document.getElementById("services").scrollIntoView();
-      }
+        function scroll_to_services() {
+            document.getElementById("services").scrollIntoView({behavior: 'smooth'});
+        }
     </script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>

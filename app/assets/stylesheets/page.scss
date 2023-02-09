@@ -57,28 +57,18 @@ body {
 
 .circle {
   position: absolute;
-  left: -50vmin;
-  top: calc(60vmin);
+  left: -30vmin;
+  top: calc(-40vmin);
   border-radius: 30% 40% 50% 60%;
   width: 100vmin;
-  z-index: 0;
+  z-index: -5;
   height: 100vmin;
   background: $starbucks-color;
-  &:after {
-    content: "";
-    background: $starbucks-color;
-    position: inherit;
-    border-radius: inherit;
-    right: -180vmin;
-    bottom: -180vmin;
-    width: inherit;
-    height: inherit;
-  }
 }
 
 .services_section {
   display: block;
-  padding: 1vh 0;
+  padding: 0 0;
   width: 100%;
   background: #fff;
   z-index: -3;
@@ -96,22 +86,32 @@ body {
   padding: 8% 0 8% 8%;
   //justify-content: center;
   box-shadow: 0 20px 50px -20px black;
-  &:after {
+  &:before {
     content: "";
     position: absolute;
     border-radius: 30px;
     inset: 0;
-    opacity: .5;
+    opacity: 1;
     background: white
   }
-  * {
-    z-index: 4;
-  }
+}
+
+.circle-bot {
+  position: absolute;
+  right: -50vmin;
+  bottom: calc(-60vmin);
+  border-radius: 30% 40% 50% 60%;
+  width: 100vmin;
+  z-index: -5;
+  height: 100vmin;
+  background: $starbucks-color;
 }
 
 .yandex_map {
   min-width: 80vw;
-  z-index: 3;
+  z-index: 50000000;
+  background: #fff;
+  position: relative;
 }
 .services__header {
   display: flex;
@@ -133,6 +133,9 @@ body {
     align-items: center;
     background: $starbucks-color;
   }
+  * {
+    z-index: 1;
+  }
 }
 .services__content {
   display: flex;
@@ -140,18 +143,24 @@ body {
   color: $starbucks-color;
   flex-direction: column;
   gap: calc(50% + 50px);
+  z-index: 1;
   width: 100%;
   //justify-items: center;
 }
+
+.services__content.pedicure {
+  gap: 8vw;
+}
+
 .services__line {
   display: flex;
-  gap: 10vw;
+  gap: 8vw;
   min-width: 500px;
-  //justify-content: center;
+  //justify-content: space-evenly;
   align-items: center;
 }
 .services__man {
-  padding-left: 24%;
+  margin-left: 24%;
   width: 40%;
   font-size: 17px;
   transition: .3s ease-in-out;
@@ -164,6 +173,8 @@ body {
 .price {
   color: $starbucks-color;
   //padding-right: 10%;
+  width: calc(30% - 8vw);
+  padding-right: 6%;
   text-align: center;
   font-weight: 900;
   font-size: 19px;
@@ -174,6 +185,7 @@ body {
   cursor: pointer;
   color: $test-btn-color;
   font-weight: 900;
+  width: 8em;
   font-size: 18px;
   padding: 10px;
   background: none;
@@ -190,6 +202,13 @@ body {
     border-radius: 1px;
   }
 
+}
+
+.service__type.active {
+  border: 2px $test-btn-color solid;
+  &:hover {
+    animation: none;
+  }
 }
 
 @keyframes circle__custom {
@@ -264,7 +283,7 @@ body {
 
 .promo-text .promo-common-text, .promo-rolano {
   font-size: 3.7vw;
-  color: $starbucks-color;
+  color: #1e3932;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
 }
@@ -285,7 +304,8 @@ body {
 
 
 .promo-rolano {
-
+  font-family: 'Pacifico', sans-serif;
+  color: $starbucks-color;
 }
 
 .promo-scissors {
@@ -350,5 +370,12 @@ body {
   background-image: url("scissors.png");
 }
 
+.examples {
+  width: 100vw;
+  height: 100vh;
+  z-index: 5000000;
+  background: #fff;
+  position: relative;
+}
 
 

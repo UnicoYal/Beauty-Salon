@@ -42,3 +42,4 @@ function init() {
     map.geoObjects.add(placemark);
     }
 ymaps.ready(init);
+

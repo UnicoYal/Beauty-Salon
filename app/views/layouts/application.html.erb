@@ -9,6 +9,21 @@
         function scroll_to_services() {
             document.getElementById("services").scrollIntoView({behavior: 'smooth'});
         }
+
+        const services_types = (e, s_name) => {
+          let types = document.getElementsByClassName('services__content');
+          let buttons = document.getElementsByClassName('service__type')
+            console.log(types)
+          let i = 0;
+          for (i = 0; i < types.length; i++) {
+              types[i].style.display = 'none'
+          }
+          for (i = 0; i < buttons.length; i++) {
+              buttons[i].className = buttons[i].className.replace(' active', '')
+          }
+          e.currentTarget.className += ' active'
+          document.getElementById(s_name).style.display = 'flex'
+        }
     </script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>

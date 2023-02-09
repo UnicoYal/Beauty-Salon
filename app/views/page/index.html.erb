@@ -8,7 +8,7 @@
   <div class="promo__section">
     <div class="promo__content">
       <div class="promo-text">
-        <span class="promo-common-text">Добро пожаловать в салон <span class="promo-rolano">Ролано</span>!</span>
+        <span class="promo-common-text">Добро пожаловать в салон <span class="promo-rolano">Ролано</span></span>
         <span class="btn-animation"></span>
         <button class="services-link" onclick="scroll_to_services()">Услуги</button>
       </div>
@@ -18,15 +18,26 @@
     </div>
   </div>
   <div class="services_section">
-    <div class="circle"></div>
     <div class="services" id="services">
+      <div class="circle"></div>
+      <div class="circle-bot"></div>
       <div class="services__header">
-        <button class="service__type" onclick="">Мужской зал</button>
-        <button class="service__type">Женский зал</button>
-        <button class="service__type">Детский зал</button>
-        <button class="service__type">Окрашивание</button>
+        <button class="service__type active" onclick="services_types(event, 'Женский зал')">Женский зал</button>
+        <button class="service__type" onclick="services_types(event, 'Мужской зал')">Мужской зал</button>
+        <button class="service__type" onclick="services_types(event, 'Макияж')">Макияж</button>
+        <button class="service__type" onclick="services_types(event, 'Маникюр')">Маникюр</button>
+        <button class="service__type" onclick="services_types(event, 'Педикюр')">Педикюр</button>
+        <button class="service__type" onclick="services_types(event, 'Депиляция')">Депиляция</button>
       </div>
-      <div class="services__content">
+      <div class="services__content active" id="Женский зал">
+        <% @for_women.each do |man_service|  %>
+          <div class="services__line">
+            <div class="services__man"><%= man_service.title %></div>
+            <div class="price"><%= man_service.price_lower_ten %></div>
+          </div>
+        <% end %>
+      </div>
+      <div class="services__content" id="Макияж" style="display: none">
         <% @makeups.each do |man_service|  %>
           <div class="services__line">
             <div class="services__man"><%= man_service.title %></div>
@@ -34,9 +45,42 @@
           </div>
         <% end %>
       </div>
+      <div class="services__content" id="Мужской зал" style="display: none">
+        <% @for_men.each do |man_service|  %>
+          <div class="services__line">
+            <div class="services__man"><%= man_service.title %></div>
+            <div class="price"><%= man_service.price %></div>
+          </div>
+        <% end %>
+      </div>
+      <div class="services__content" id="Маникюр" style="display: none">
+        <% @manicures.each do |man_service|  %>
+          <div class="services__line">
+            <div class="services__man"><%= man_service.title %></div>
+            <div class="price"><%= man_service.price %></div>
+          </div>
+        <% end %>
+      </div>
+      <div class="services__content pedicure" id="Педикюр" style="display: none">
+        <% @pedicures.each do |man_service|  %>
+          <div class="services__line">
+            <div class="services__man"><%= man_service.title %></div>
+            <div class="price"><%= man_service.price %></div>
+          </div>
+        <% end %>
+      </div>
+      <div class="services__content" id="Депиляция" style="display: none">
+        <% @depilations.each do |man_service|  %>
+          <div class="services__line">
+            <div class="services__man"><%= man_service.title %></div>
+            <div class="price"><%= man_service.price %></div>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="circle-bot"></div>
   </div>
+
+<!--  <div class="examples"></div>-->
 <h1>Карта</h1>
   <div id="yandex_map" class="yandex_map">
 </div>

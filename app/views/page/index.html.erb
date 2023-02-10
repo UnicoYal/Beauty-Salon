@@ -17,7 +17,6 @@
       </div>
     </div>
   </div>
-  <%# <%= image_tag("first_photo.jpg", height: '700', width: '1200', class: "d-block w-100", alt: "...") ФОТО ВСТАВЛЯЮТСЯ ТАК%> %>
   <div class="services_section">
     <div class="services" id="services">
       <div class="circle"></div>
@@ -81,7 +80,40 @@
     </div>
   </div>
 
-<!--  <div class="examples"></div>-->
+  <div class="examples" id="examples">
+    <div class="examples-header">
+        Наши работы
+    </div>
+    <div class="examples-content">
+      <div class="examples-area">
+        <%= image_tag("first_photo.jpg", class: "examples-images", alt: "...")%>
+
+      </div>
+      <div class="examples-area">
+        <%= image_tag("second_photo.jpg", class: "examples-images", alt: "...")%>
+
+      </div>
+      <div class="examples-area">
+        <%= image_tag("third_photo.jpg", class: "examples-images", alt: "...")%>
+
+      </div>
+      <button class="arrow-prev">
+        <span></span>
+      </button>
+      <button class="arrow-next">
+        <span></span>
+      </button>
+<!--      <div class="examples-area">-->
+        <%#= image_tag("fourth_photo.jpg", class: "examples-images", alt: "...")%>
+
+<!--      </div>-->
+<!--      <div class="examples-area">-->
+        <%#= image_tag("fifth_photo.jpg", class: "examples-images", alt: "...")%>
+
+<!--      </div>-->
+    </div>
+
+  </div>
 <h1>Карта</h1>
   <div id="yandex_map" class="yandex_map">
 </div>

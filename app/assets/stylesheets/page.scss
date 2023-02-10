@@ -7,6 +7,7 @@ $secondary-color: #17d360;
 $starbucks-color: #016341;
 $test-btn-color: #016341;
 $brown-theme-color: #2f1b11;
+$dark-starbucks-color: #1e3932;
 
 
 body {
@@ -109,7 +110,7 @@ body {
 
 .yandex_map {
   min-width: 80vw;
-  z-index: 50000000;
+  z-index: 5;
   background: #fff;
   position: relative;
 }
@@ -155,7 +156,6 @@ body {
 .services__line {
   display: flex;
   gap: 8vw;
-  min-width: 500px;
   //justify-content: space-evenly;
   align-items: center;
 }
@@ -185,6 +185,7 @@ body {
   cursor: pointer;
   color: $test-btn-color;
   font-weight: 900;
+  font-family: inherit;
   width: 8em;
   font-size: 18px;
   padding: 10px;
@@ -372,10 +373,75 @@ body {
 
 .examples {
   width: 100vw;
-  height: 100vh;
-  z-index: 5000000;
+  z-index: 5;
   background: #fff;
+  min-height: 50vw;
   position: relative;
+  margin-bottom: 10vw;
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+}
+.examples-header {
+  width: 80vw;
+  margin: 10vw 10vw 3vw;
+  border-top: 1px solid $starbucks-color;
+  border-bottom: 1px solid $starbucks-color;
+  color: $dark-starbucks-color;
+  padding: 5vw 0;
+  font-size: 3vw;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+.examples-content {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  position: relative;
+  gap: 4vw;
+  margin: 0 10vw 10vw;
+  max-width: 80vw;
+}
+.examples-area {
+  height: 300px;
+  position: relative;
+}
+.examples-images {
+  position: relative;
+  max-width: 24vw;
+  border-bottom: 1px solid $starbucks-color;
+  padding-bottom: 5vw;
+  //width: 200px;
+  //height: 200px;
+}
+.arrow-prev, .arrow-next {
+  position: absolute;
+  top: -5vw;
+  right: 2vw;
+  //transform: rotate(-90deg);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.arrow-prev span{
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid $dark-starbucks-color;
+  border-right: 5px solid $dark-starbucks-color;
+  transform: rotate(135deg);
+  margin: -10px;
+  margin-right: 2vw;
+}
+.arrow-next span{
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid $dark-starbucks-color;
+  border-right: 5px solid $dark-starbucks-color;
+  transform: rotate(-45deg);
+  margin: -10px;
 }
 
 

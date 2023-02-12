@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateWomenHairCuts < ActiveRecord::Migration[7.0]
   def change
     create_table :women_hair_cuts do |t|

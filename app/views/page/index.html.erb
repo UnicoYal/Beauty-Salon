@@ -83,34 +83,38 @@
   <div class="examples" id="examples">
     <div class="examples-header">
         Наши работы
+      <button class="arrow-prev" onclick="prevSlide()">
+
+      </button>
+      <button class="arrow-next" onclick="nextSlide()">
+
+      </button>
     </div>
-    <div class="examples-content">
-      <div class="examples-area">
-        <%= image_tag("first_photo.jpg", class: "examples-images", alt: "...")%>
+    <div class="examples-content" id="slides">
+      <div class="initial-slides" id="initial-slide">
+        <div class="examples-area">
+          <%= image_tag("first_photo.jpg", class: "examples-images", alt: "...")%>
 
+        </div>
+        <div class="examples-area">
+          <%= image_tag("second_photo.jpg", class: "examples-images", alt: "...")%>
+
+        </div>
+        <div class="examples-area">
+          <%= image_tag("third_photo.jpg", class: "examples-images", alt: "...")%>
+
+        </div>
       </div>
-      <div class="examples-area">
-        <%= image_tag("second_photo.jpg", class: "examples-images", alt: "...")%>
+      <div class="second-slides" id="second-slide">
+        <div class="examples-area">
+          <%= image_tag("fourth_photo.jpg", class: "examples-images", alt: "...")%>
 
+        </div>
+        <div class="examples-area">
+          <%= image_tag("fifth_photo.jpg", class: "examples-images", alt: "...")%>
+
+        </div>
       </div>
-      <div class="examples-area">
-        <%= image_tag("third_photo.jpg", class: "examples-images", alt: "...")%>
-
-      </div>
-      <button class="arrow-prev">
-        <span></span>
-      </button>
-      <button class="arrow-next">
-        <span></span>
-      </button>
-<!--      <div class="examples-area">-->
-        <%#= image_tag("fourth_photo.jpg", class: "examples-images", alt: "...")%>
-
-<!--      </div>-->
-<!--      <div class="examples-area">-->
-        <%#= image_tag("fifth_photo.jpg", class: "examples-images", alt: "...")%>
-
-<!--      </div>-->
     </div>
 
   </div>

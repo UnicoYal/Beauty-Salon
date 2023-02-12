@@ -24,6 +24,13 @@
           e.currentTarget.className += ' active'
           document.getElementById(s_name).style.display = 'flex'
         }
+
+        const nextSlide = () => {
+          document.getElementById('slides').classList.add('current-slide-to-next');
+        }
+        const prevSlide = () => {
+            document.getElementById('slides').classList.remove('current-slide-to-next')
+        }
     </script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>

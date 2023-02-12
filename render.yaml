@@ -1,7 +1,6 @@
 databases:
   - name: postgres
     databaseName: beauty
-    user: postgres
 
 services:
   - type: web

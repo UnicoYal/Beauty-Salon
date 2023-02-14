@@ -28,7 +28,7 @@ development:
   host: localhost
   pool: 5
   username: postgres
-  password: Igor310304
+  password: 5915
 
 
   # The specified database role being used to connect to postgres.

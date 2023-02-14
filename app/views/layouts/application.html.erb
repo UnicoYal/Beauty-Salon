@@ -6,14 +6,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script>
+        document.addEventListener('click', function(event) {
+            let infoWindow = document.getElementById('info')
+            const outsideClick = !infoWindow.contains(event.target);
+            if (document.getElementsByClassName('info-btn')[0].contains(event.target)) {
+                setTimeout(showInfo, 200)
+            }
+            if (outsideClick && (infoWindow.style.display === "flex")) {
+                infoWindow.style.display = "none"
+            }
+        });
+
+      function showInfo() {
+        document.getElementById('info').style.display = 'flex'
+      }
+
         function scroll_to_services() {
-            document.getElementById("examples").scrollIntoView({behavior: 'smooth'});
+            document.getElementById("services").scrollIntoView({behavior: 'smooth'});
         }
 
         const services_types = (e, s_name) => {
           let types = document.getElementsByClassName('services__content');
           let buttons = document.getElementsByClassName('service__type')
-            console.log(types)
           let i = 0;
           for (i = 0; i < types.length; i++) {
               types[i].style.display = 'none'
@@ -23,10 +37,14 @@
           }
           e.currentTarget.className += ' active'
           document.getElementById(s_name).style.display = 'flex'
+            if (window.innerWidth <= '800') {
+                console.log(window.innerWidth)
+                document.getElementById(s_name).scrollIntoView({behavior: "smooth"})
+            }
         }
 
         const nextSlide = () => {
-          document.getElementById('slides').classList.add('current-slide-to-next');
+          document.getElementsByClassName('examples-content')[0].classList.add('current-slide-to-next');
         }
         const prevSlide = () => {
             document.getElementById('slides').classList.remove('current-slide-to-next')

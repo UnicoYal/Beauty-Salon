@@ -9,7 +9,6 @@
     <div class="promo__content">
       <div class="promo-text">
         <span class="promo-common-text">Добро пожаловать в салон <span class="promo-rolano">Ролано</span></span>
-        <span class="btn-animation"></span>
         <button class="services-link" onclick="scroll_to_services()">Услуги</button>
       </div>
       <div class="promo-scissors">
@@ -29,11 +28,30 @@
         <button class="service__type" onclick="services_types(event, 'Педикюр')">Педикюр</button>
         <button class="service__type" onclick="services_types(event, 'Депиляция')">Депиляция</button>
       </div>
-      <div class="services__content active" id="Женский зал">
+      <div class="services__content active woman" id="Женский зал">
+        <div class="services__line">
+          <div class="services__man woman">
+            <div class="info-window" style="display: none" id="info">
+              <div>Цена зависит от длины волос в сантиметрах</div>
+            </div>
+            <button class="info-btn" onclick="showInfo()">
+              <%= image_tag("information.png", class:"info-icon") %>
+            </button>
+          </div>
+          <div class="price woman">
+            <div class="prices prices-header">До 10</div>
+            <div class="prices prices-header">От 10 до 20</div>
+            <div class="prices prices-header">Больше 20</div>
+          </div>
+        </div>
         <% @for_women.each do |man_service|  %>
           <div class="services__line">
-            <div class="services__man"><%= man_service.title %></div>
-            <div class="price"><%= man_service.price_lower_ten %></div>
+            <div class="services__man woman"><%= man_service.title %></div>
+            <div class="price woman">
+              <div class="prices"><%= man_service.price_lower_ten %></div>
+              <div class="prices"><%= man_service.price_ten_to_twenty %></div>
+              <div class="prices"><%= man_service.price_upper_twenty %></div>
+            </div>
           </div>
         <% end %>
       </div>
@@ -118,10 +136,25 @@
     </div>
 
   </div>
-<h1>Карта</h1>
+<h1>Вы можете найти нас здесь</h1>
   <div id="yandex_map" class="yandex_map">
 </div>
 
 
-  <div class="footer"></div>
+  <div class="footer">
+    <div class="footer-left">
+      <div class="logo footer-logo">ролано</div>
+      <div class="work-time">Время работы: <span>9:00-20:00</span></div>
+    </div>
+    <div class="girl"></div>
+    <%#= image_tag('girl2.png', class: 'footer-girl-img') %>
+    <div class="footer-social">
+      <a href="https://instagram.com/_rolano_?igshid=MDM4ZDc5MmU=" target="_blank" class="inst-link"><%= image_tag('inst.svg', class: 'inst') %></a>
+      <div class="phone"><a href="tel: 8-495-792-81-39">+7 (495) 792-81-39</a> </div>
+    </div>
+  </div>
+</div>
+<div class="test">
+  <div class="item1"></div>
+  <div class="item2"></div>
 </div>

@@ -38,16 +38,19 @@
           e.currentTarget.className += ' active'
           document.getElementById(s_name).style.display = 'flex'
             if (window.innerWidth <= '800') {
-                console.log(window.innerWidth)
                 document.getElementById(s_name).scrollIntoView({behavior: "smooth"})
             }
         }
 
-        const nextSlide = () => {
+        const nextSlide = (e) => {
           document.getElementsByClassName('examples-content')[0].classList.add('current-slide-to-next');
+          e.target.style.borderColor = '#999999'
+            document.getElementsByClassName('arrow-prev')[0].style.borderColor = '#1e3932'
         }
-        const prevSlide = () => {
+        const prevSlide = (e) => {
             document.getElementById('slides').classList.remove('current-slide-to-next')
+            e.target.style.borderColor = '#999999'
+            document.getElementsByClassName('arrow-next')[0].style.borderColor = '#1e3932'
         }
     </script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>

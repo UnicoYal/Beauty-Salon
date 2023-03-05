@@ -122,7 +122,7 @@ body {
   font-family: 'Raleway', sans-serif;
   flex-direction: column;
   color: $starbucks-color;
-  gap: 100px;
+  gap: 4.5vw;
   padding-right: 10%;
   border-right: 2px solid $primary-color;
   position: relative;
@@ -668,6 +668,8 @@ body {
 .arrow-prev{
   transform: rotate(135deg);
   margin-right: 2vw;
+  border-bottom: 5px solid #999999;
+  border-right: 5px solid #999999;
 }
 .arrow-next {
   transform: rotate(-45deg);

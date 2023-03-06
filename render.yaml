@@ -17,4 +17,5 @@ services:
         sync: false
   - type: redis
     name: redis
+    ipAllowList: []
     plan: free

@@ -1,5 +1,6 @@
 databases:
   - name: postgres
+    ipAllowList: []
     databaseName: beauty
 
 services:
@@ -19,3 +20,4 @@ services:
     name: redis
     ipAllowList: []
     plan: free
+    maxmemoryPolicy: noeviction

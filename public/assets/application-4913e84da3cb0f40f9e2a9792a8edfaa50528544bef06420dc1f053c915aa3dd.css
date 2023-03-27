@@ -1,0 +1,992 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:ital,wght@0,100;0,300;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Pacifico&family=Raleway:ital,wght@0,100;0,300;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Pacifico&family=Raleway:ital,wght@0,100;0,300;1,200&display=swap");
+/* line 14, app/assets/stylesheets/page.scss */
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* line 30, app/assets/stylesheets/page.scss */
+.header {
+  position: relative;
+  top: 0;
+  min-width: 300px;
+  display: flex;
+  background: #fff;
+  width: 100vw;
+  height: 60px;
+  box-shadow: 0 10px 50px -35px black;
+  justify-content: right;
+  border-bottom: 1.5px solid #dbdbdb;
+  padding-bottom: 30px;
+  z-index: 5;
+}
+
+/* line 46, app/assets/stylesheets/page.scss */
+.logo {
+  font-family: 'Pacifico', sans-serif;
+  color: #016341;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 50px;
+  padding-right: 10%;
+  text-transform: uppercase;
+  transition: .3s ease-in-out;
+}
+
+/* line 56, app/assets/stylesheets/page.scss */
+.logo:hover {
+  color: black;
+}
+
+/* line 61, app/assets/stylesheets/page.scss */
+.circle {
+  position: absolute;
+  left: -30vmin;
+  top: calc(-40vmin);
+  border-radius: 30% 40% 50% 60%;
+  width: 100vmin;
+  z-index: -5;
+  height: 100vmin;
+  background: #016341;
+}
+
+/* line 72, app/assets/stylesheets/page.scss */
+.services_section {
+  display: block;
+  padding: 0 0;
+  width: 100%;
+  background: #fff;
+  z-index: -3;
+}
+
+/* line 80, app/assets/stylesheets/page.scss */
+.services {
+  display: flex;
+  z-index: 2;
+  margin: 10%;
+  border: 1px #016341 solid;
+  border-radius: 30px;
+  position: relative;
+  font-family: inherit;
+  max-width: 100%;
+  padding: 8% 0 8% 8%;
+  box-shadow: 0 20px 50px -20px black;
+}
+
+/* line 92, app/assets/stylesheets/page.scss */
+.services:before {
+  content: "";
+  position: absolute;
+  border-radius: 30px;
+  inset: 0;
+  opacity: 1;
+  background: white;
+}
+
+/* line 102, app/assets/stylesheets/page.scss */
+.circle-bot {
+  position: absolute;
+  right: -50vmin;
+  bottom: calc(-60vmin);
+  border-radius: 30% 40% 50% 60%;
+  width: 100vmin;
+  z-index: -5;
+  height: 100vmin;
+  background: #016341;
+}
+
+/* line 113, app/assets/stylesheets/page.scss */
+.yandex_map {
+  min-width: 80vw;
+  z-index: 5;
+  max-height: 80vh;
+  background: #fff;
+  position: relative;
+}
+
+/* line 120, app/assets/stylesheets/page.scss */
+.services__header {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  flex-direction: column;
+  color: #016341;
+  gap: 4.5vw;
+  padding-right: 10%;
+  border-right: 2px solid #093725;
+  position: relative;
+}
+
+/* line 129, app/assets/stylesheets/page.scss */
+.services__header:after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: calc(100% - 1px);
+  margin-top: 1px;
+  right: -20px;
+  justify-content: center;
+  align-items: center;
+  background: #016341;
+}
+
+/* line 140, app/assets/stylesheets/page.scss */
+.services__header * {
+  z-index: 1;
+}
+
+/* line 144, app/assets/stylesheets/page.scss */
+.services__content {
+  display: flex;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  color: #016341;
+  flex-direction: column;
+  gap: calc(50% + 50px);
+  z-index: 1;
+  width: 100%;
+}
+
+/* line 156, app/assets/stylesheets/page.scss */
+.services__content.pedicure {
+  gap: 8vw;
+}
+
+/* line 160, app/assets/stylesheets/page.scss */
+.services__line {
+  display: flex;
+  gap: 8vw;
+  align-items: center;
+}
+
+/* line 166, app/assets/stylesheets/page.scss */
+.services__man {
+  margin-left: 24%;
+  width: 40%;
+  font-size: 17px;
+  transition: .3s ease-in-out;
+  font-weight: 300;
+}
+
+/* line 172, app/assets/stylesheets/page.scss */
+.services__man:hover {
+  color: black;
+  cursor: pointer;
+}
+
+/* line 177, app/assets/stylesheets/page.scss */
+.services__man.woman {
+  margin-left: calc(25px + 2vw);
+  width: 40%;
+}
+
+/* line 181, app/assets/stylesheets/page.scss */
+.price.woman {
+  display: flex;
+  gap: 15.5%;
+  width: 70%;
+}
+
+/* line 186, app/assets/stylesheets/page.scss */
+.container {
+  display: flex;
+  width: 100%;
+  gap: 4vw;
+  align-items: center;
+  top: -5vw;
+}
+
+/* line 193, app/assets/stylesheets/page.scss */
+.padding {
+  width: 40%;
+  margin-left: calc(25px + 2vw);
+}
+
+/* line 197, app/assets/stylesheets/page.scss */
+.hair-length {
+  position: relative;
+  display: flex;
+  width: 70%;
+  gap: 15.5%;
+  right: 6%;
+  color: #1e3932;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
+
+/* line 207, app/assets/stylesheets/page.scss */
+.hair-length div {
+  width: 100%;
+  font-size: 1em;
+  color: #1e3932;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+/* line 214, app/assets/stylesheets/page.scss */
+.services__content.woman .services__line {
+  gap: 4vw;
+}
+
+/* line 217, app/assets/stylesheets/page.scss */
+.prices.prices-header {
+  font-size: 1em;
+  font-weight: 600;
+  color: #1e3932;
+}
+
+/* line 222, app/assets/stylesheets/page.scss */
+.prices {
+  width: 23%;
+  font-size: calc(.85em + .1vw);
+  position: relative;
+  text-align: center;
+}
+
+/* line 229, app/assets/stylesheets/page.scss */
+.price {
+  color: #016341;
+  width: calc(30% - 8vw);
+  padding-right: 6%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 19px;
+}
+
+/* line 239, app/assets/stylesheets/page.scss */
+.service__type {
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: #016341;
+  font-weight: 300;
+  font-family: inherit;
+  width: 8em;
+  font-size: 18px;
+  padding: 10px;
+  background: none;
+}
+
+/* line 250, app/assets/stylesheets/page.scss */
+.service__type:hover {
+  border: 2px #016341 solid;
+  outline: none;
+  border-radius: 1px;
+  background: none;
+  animation: circle__custom ease-in-out 1.5s;
+}
+
+/* line 257, app/assets/stylesheets/page.scss */
+.service__type:focus {
+  border: 2px #016341 solid;
+  border-radius: 1px;
+}
+
+@keyframes circle__custom {
+  from {
+    border: 2px solid transparent;
+    border-radius: 1px;
+    background: none;
+  }
+  25% {
+    border-top: 2px #016341 solid;
+    border-radius: 1px;
+    background: none;
+  }
+  50% {
+    border-top: 2px #016341 solid;
+    border-right: 2px #016341 solid;
+    border-radius: 1px;
+    background: none;
+  }
+  75% {
+    border-top: 2px #016341 solid;
+    border-right: 2px #016341 solid;
+    border-bottom: 2px #016341 solid;
+    border-radius: 1px;
+    background: none;
+  }
+  100% {
+    border: 2px #016341 solid;
+    border-radius: 1px;
+    background: none;
+  }
+}
+
+/* line 295, app/assets/stylesheets/page.scss */
+.promo__section {
+  width: 100vw;
+  position: relative;
+  height: calc(100vh - 60px);
+  z-index: 3;
+  background: #fff;
+}
+
+/* line 303, app/assets/stylesheets/page.scss */
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 313, app/assets/stylesheets/page.scss */
+.promo-text {
+  width: 50vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+}
+
+/* line 320, app/assets/stylesheets/page.scss */
+.promo-text:before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-image: url(/assets/scissors-02b0d523833e674e879c52e290942e8c32800f83ce4f2c8a16a64b085e46ddb7.png);
+}
+
+/* line 334, app/assets/stylesheets/page.scss */
+.promo-text .promo-common-text, .promo-rolano {
+  font-size: 3.7vw;
+  color: #1e3932;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* line 342, app/assets/stylesheets/page.scss */
+.promo-common-text {
+  padding-left: 5%;
+  z-index: 2;
+}
+
+/* line 345, app/assets/stylesheets/page.scss */
+.promo-common-text:after {
+  position: absolute;
+  content: "";
+  right: 10vw;
+  top: 15vh;
+  background-size: cover;
+  background-image: url(/assets/girl1-b5c077a4afca6a15bda9455917c107b8e691b851b77d66a0c01074ae80637c95.png);
+  width: 30vw;
+  z-index: 1;
+  height: 30vw;
+}
+
+/* line 359, app/assets/stylesheets/page.scss */
+.promo-rolano {
+  font-family: 'Pacifico', sans-serif;
+  color: #016341;
+}
+
+/* line 364, app/assets/stylesheets/page.scss */
+.promo-scissors {
+  z-index: 4;
+  position: relative;
+  height: 25%;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 373, app/assets/stylesheets/page.scss */
+.services-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  color: #016341;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  padding: 1% 3%;
+  border: 1.5px solid #016341;
+  left: 15%;
+  bottom: 25%;
+}
+
+/* line 386, app/assets/stylesheets/page.scss */
+.services-link:hover {
+  background: #016341;
+  color: white;
+  border: 1.5px solid transparent;
+  transition: .3s ease-in;
+}
+
+/* line 396, app/assets/stylesheets/page.scss */
+.services-link:hover {
+  color: #fff;
+}
+
+/* line 400, app/assets/stylesheets/page.scss */
+.services-link:before {
+  content: "";
+  position: absolute;
+  background: #016341;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 100%;
+  z-index: -1;
+  -webkit-transition: right 0.09s ease-in;
+}
+
+/* line 411, app/assets/stylesheets/page.scss */
+.services-link:hover:before {
+  right: 0;
+}
+
+/* line 417, app/assets/stylesheets/page.scss */
+.scissors {
+  position: relative;
+  right: -5%;
+  width: 25%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/assets/scissors-02b0d523833e674e879c52e290942e8c32800f83ce4f2c8a16a64b085e46ddb7.png);
+}
+
+/* line 426, app/assets/stylesheets/page.scss */
+.info-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* line 431, app/assets/stylesheets/page.scss */
+.info-window {
+  position: absolute;
+  width: 15vw;
+  left: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -10vw;
+  height: 10vw;
+  border-radius: 3px;
+  border: 1px solid #1e3932;
+  background: #ffffff;
+}
+
+/* line 444, app/assets/stylesheets/page.scss */
+.info-window div {
+  padding: .5vw;
+  font-family: Raleway, sans-serif;
+  color: #1e3932;
+  font-size: 1.2vw;
+}
+
+/* line 451, app/assets/stylesheets/page.scss */
+.info-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1005px) {
+  /* line 458, app/assets/stylesheets/page.scss */
+  .services {
+    flex-direction: column;
+    padding: 3%;
+    gap: 5vw;
+  }
+  /* line 463, app/assets/stylesheets/page.scss */
+  .info-window {
+    top: -5vw;
+  }
+  /* line 466, app/assets/stylesheets/page.scss */
+  .service__type {
+    width: 11vw;
+    font-size: 1.7vw;
+    padding: 1vw;
+  }
+  /* line 471, app/assets/stylesheets/page.scss */
+  .services__header {
+    border-right: none;
+    border-bottom: 2px solid #093725;
+    flex-direction: row;
+    gap: 3vw;
+    padding-bottom: 2vw;
+  }
+  /* line 477, app/assets/stylesheets/page.scss */
+  .services__header:after {
+    position: absolute;
+    content: "";
+    width: calc(100% - 1px);
+    height: 1px;
+    margin-right: 1px;
+    bottom: -20px;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: #016341;
+  }
+  /* line 490, app/assets/stylesheets/page.scss */
+  .services__man {
+    margin-left: calc(25px + 2vw);
+  }
+  /* line 493, app/assets/stylesheets/page.scss */
+  .services__content {
+    gap: 5vw;
+    font-size: 1vw;
+  }
+  /* line 497, app/assets/stylesheets/page.scss */
+  .services__line {
+    justify-content: space-between;
+  }
+  /* line 500, app/assets/stylesheets/page.scss */
+  .promo-text .promo-common-text, .promo-rolano {
+    font-size: 4vw;
+  }
+  /* line 503, app/assets/stylesheets/page.scss */
+  .promo-common-text::after {
+    top: 20vh;
+    width: 45vw;
+    height: 45vw;
+    right: 8vw;
+  }
+  /* line 509, app/assets/stylesheets/page.scss */
+  .services-link {
+    padding: 2% 6%;
+    font-size: 2.4vw;
+  }
+}
+
+/* line 515, app/assets/stylesheets/page.scss */
+.service__type.active {
+  border: 2px #016341 solid;
+}
+
+/* line 517, app/assets/stylesheets/page.scss */
+.service__type.active:hover {
+  animation: none;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 522, app/assets/stylesheets/page.scss */
+  .services__header {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+  }
+  /* line 527, app/assets/stylesheets/page.scss */
+  .info-window {
+    width: calc(50px + 10vw);
+    height: calc(40px + 7vw);
+  }
+  /* line 531, app/assets/stylesheets/page.scss */
+  .info-window div {
+    font-size: calc(8px + 1.2vw);
+  }
+  /* line 534, app/assets/stylesheets/page.scss */
+  .services__content {
+    gap: 8vw;
+    justify-content: normal;
+    margin-top: 5vw;
+  }
+  /* line 539, app/assets/stylesheets/page.scss */
+  .services__line {
+    gap: 0;
+  }
+  /* line 542, app/assets/stylesheets/page.scss */
+  .service__type {
+    width: 28vw;
+    font-size: 4vw;
+    padding: 3vw;
+  }
+  /* line 547, app/assets/stylesheets/page.scss */
+  .price {
+    font-size: 3.5vw;
+    padding-right: 0;
+  }
+  /* line 551, app/assets/stylesheets/page.scss */
+  .price.woman {
+    margin-right: 5px;
+    gap: 5%;
+  }
+  /* line 555, app/assets/stylesheets/page.scss */
+  .prices {
+    font-size: 3.5vw;
+    padding-right: 0;
+    width: 40%;
+  }
+  /* line 560, app/assets/stylesheets/page.scss */
+  .services__man {
+    font-size: 3.5vw;
+    width: 70%;
+    margin-left: 0;
+  }
+  /* line 565, app/assets/stylesheets/page.scss */
+  .services__man.woman {
+    font-size: 3.5vw;
+    width: 70%;
+    margin-left: 0;
+  }
+  /* line 570, app/assets/stylesheets/page.scss */
+  .services {
+    margin: 2%;
+    border-radius: 15px;
+  }
+  /* line 574, app/assets/stylesheets/page.scss */
+  .promo-text .promo-common-text, .promo-rolano {
+    font-size: calc(5vw + .8vh);
+  }
+  /* line 577, app/assets/stylesheets/page.scss */
+  .promo-common-text::after {
+    top: 15vh;
+    width: 45vw;
+    height: 45vw;
+    right: 0;
+  }
+  /* line 583, app/assets/stylesheets/page.scss */
+  .promo-text {
+    margin-bottom: 10vw;
+    width: calc(50vw + 10vh);
+  }
+  /* line 587, app/assets/stylesheets/page.scss */
+  .services-link {
+    padding: 2% 6%;
+    font-size: calc(2.4vw + 1vh);
+    bottom: 35%;
+  }
+}
+
+/* line 594, app/assets/stylesheets/page.scss */
+.examples {
+  width: 100vw;
+  z-index: 5;
+  background: #fff;
+  min-height: 50vw;
+  position: relative;
+  margin-bottom: 10vw;
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+}
+
+/* line 605, app/assets/stylesheets/page.scss */
+.examples-header {
+  width: 80vw;
+  margin: 10vw 10vw 3vw;
+  position: relative;
+  border-top: 1px solid #016341;
+  border-bottom: 1px solid #016341;
+  color: #1e3932;
+  padding: 5vw 0;
+  font-size: 3vw;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+/* line 617, app/assets/stylesheets/page.scss */
+.examples-content {
+  display: flex;
+  width: 200vw;
+  transition: .5s ease-in-out;
+  position: relative;
+}
+
+/* line 623, app/assets/stylesheets/page.scss */
+.initial-slides {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  position: relative;
+  gap: 4vw;
+  margin: 0 10vw 10vw;
+  max-width: 80vw;
+}
+
+/* line 632, app/assets/stylesheets/page.scss */
+.second-slides {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  position: relative;
+  gap: 4vw;
+  margin: 0 10vw 10vw;
+  max-width: 80vw;
+}
+
+/* line 641, app/assets/stylesheets/page.scss */
+.examples-area {
+  position: relative;
+}
+
+/* line 645, app/assets/stylesheets/page.scss */
+.examples-images {
+  position: relative;
+  width: 24vw;
+  border-bottom: 1px solid #016341;
+  padding-bottom: 5vw;
+  object-fit: cover;
+  max-height: 34.6vw;
+}
+
+/* line 653, app/assets/stylesheets/page.scss */
+.arrow-prev, .arrow-next {
+  position: absolute;
+  bottom: -5vw;
+  right: 2vw;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #1e3932;
+  border-right: 5px solid #1e3932;
+  margin: -10px;
+}
+
+/* line 668, app/assets/stylesheets/page.scss */
+.arrow-prev {
+  transform: rotate(135deg);
+  margin-right: 2vw;
+  border-bottom: 5px solid #999999;
+  border-right: 5px solid #999999;
+}
+
+/* line 674, app/assets/stylesheets/page.scss */
+.arrow-next {
+  transform: rotate(-45deg);
+}
+
+/* line 678, app/assets/stylesheets/page.scss */
+.current-slide-to-next {
+  margin-left: -100vw;
+  transition: .5s ease-in-out;
+}
+
+/* line 687, app/assets/stylesheets/page.scss */
+h1 {
+  border-top: 1px solid #016341;
+  border-bottom: 1px solid #016341;
+  margin-left: 5vw;
+  font-size: calc(15px + 2vw);
+  margin-right: 5vw;
+  padding-top: 5vw;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: .3vw;
+  font-weight: 300;
+  padding-bottom: 5vw;
+  color: #1e3932;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 702, app/assets/stylesheets/page.scss */
+  .arrow-next, .arrow-prev {
+    bottom: -15vw;
+    width: 2em;
+    height: 2em;
+    border-bottom: 3px solid #1e3932;
+    border-right: 3px solid #1e3932;
+  }
+  /* line 709, app/assets/stylesheets/page.scss */
+  .arrow-prev {
+    margin-right: 15vw;
+  }
+  /* line 712, app/assets/stylesheets/page.scss */
+  .arrow-next {
+    margin-right: 2vw;
+  }
+}
+
+/* line 717, app/assets/stylesheets/page.scss */
+.footer {
+  width: 100vw;
+  background: #ffffff;
+  margin-top: 100px;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  gap: 15vw;
+  box-shadow: 0 20px 40px -10px black;
+  padding-bottom: 2vw;
+}
+
+/* line 726, app/assets/stylesheets/page.scss */
+.footer * {
+  min-font-size: 15px;
+}
+
+/* line 731, app/assets/stylesheets/page.scss */
+.inst {
+  width: 100px;
+  height: 100px;
+}
+
+/* line 736, app/assets/stylesheets/page.scss */
+.inst-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #1e3932;
+}
+
+/* line 742, app/assets/stylesheets/page.scss */
+.footer-left {
+  display: flex;
+  gap: 2vw;
+  width: calc((100vw - 30vw - 300px)/2);
+  flex-direction: column;
+  margin-left: 5vw;
+  margin-top: 2vw;
+}
+
+/* line 751, app/assets/stylesheets/page.scss */
+.footer-social {
+  margin-top: 2vw;
+  width: calc((100vw - 30vw - 300px)/2);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  justify-content: center;
+  color: #88ae45;
+  font-size: calc(10px + .5vw);
+  font-family: 'Open Sans', sans-serif;
+  align-items: center;
+}
+
+/* line 763, app/assets/stylesheets/page.scss */
+.work-time {
+  color: #016341;
+  font-size: calc(15px + .5vw);
+}
+
+/* line 767, app/assets/stylesheets/page.scss */
+.work-time span {
+  color: #1e3932;
+}
+
+/* line 772, app/assets/stylesheets/page.scss */
+.girl {
+  background-image: url(/assets/girl1-b5c077a4afca6a15bda9455917c107b8e691b851b77d66a0c01074ae80637c95.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 300px;
+  z-index: 1000;
+  position: relative;
+  margin-top: 2vw;
+  height: 300px;
+  min-height: 300px;
+  min-width: 300px;
+}
+
+/* line 786, app/assets/stylesheets/page.scss */
+.phone a {
+  text-decoration: none;
+  color: #88ae45;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 793, app/assets/stylesheets/page.scss */
+  .footer-social {
+    margin-right: 5vw;
+    width: 30vw;
+    justify-content: normal;
+  }
+  /* line 798, app/assets/stylesheets/page.scss */
+  .footer {
+    gap: 5vw;
+  }
+  /* line 801, app/assets/stylesheets/page.scss */
+  .phone {
+    width: 20vw;
+    text-align: center;
+  }
+  /* line 805, app/assets/stylesheets/page.scss */
+  .girl {
+    width: 40vw;
+    height: 40vw;
+    min-height: 0;
+    min-width: 0;
+  }
+  /* line 811, app/assets/stylesheets/page.scss */
+  .footer-logo {
+    font-size: 4vw;
+  }
+  /* line 814, app/assets/stylesheets/page.scss */
+  .footer-left {
+    width: 20vw;
+  }
+  /* line 817, app/assets/stylesheets/page.scss */
+  .footer-left, .footer-social {
+    margin-top: 10vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* line 823, app/assets/stylesheets/page.scss */
+  .girl {
+    margin-top: 3vh;
+    margin-left: 3vh;
+  }
+  /* line 827, app/assets/stylesheets/page.scss */
+  .footer-left {
+    width: 15vw;
+  }
+  /* line 830, app/assets/stylesheets/page.scss */
+  .footer-social {
+    width: 40vw;
+    font-size: 2.5vw;
+    margin-right: 0;
+  }
+  /* line 835, app/assets/stylesheets/page.scss */
+  .inst {
+    width: 50px;
+    height: 50px;
+  }
+  /* line 839, app/assets/stylesheets/page.scss */
+  .phone {
+    width: 100%;
+  }
+  /* line 842, app/assets/stylesheets/page.scss */
+  .work-time {
+    font-size: 2vw;
+  }
+}
+
+/* line 848, app/assets/stylesheets/page.scss */
+.App {
+  overflow-x: hidden;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+@import "page.scss";
+.yandex_map {
+    height: 700px;
+    margin-bottom: 0.8em;
+}

@@ -11,6 +11,8 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+gem 'bundler', '= 2.3.7'
+
 # Use sqlite3 as the database for Active Record
 
 # Use the Puma web server [https://github.com/puma/puma]

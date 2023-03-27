@@ -6,8 +6,3 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
-namespace :deploy do
-  desc 'Description for rake task'
-  task generate_secret_token: :environment do
-  end
-end

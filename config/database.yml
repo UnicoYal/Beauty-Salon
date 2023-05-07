@@ -89,8 +89,6 @@ production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
   encoding: unicode
-  database: beauty_production
-  host: localhost
-  pool: 5
+  database: beauty
   username: postgres
   password: Igor310304

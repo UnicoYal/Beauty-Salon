@@ -88,7 +88,3 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  encoding: unicode
-  database: beauty
-  username: postgres
-  password: Igor310304

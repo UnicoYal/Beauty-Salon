@@ -14,7 +14,7 @@
  *= require_self
  */
 
-@import "page.scss";
+/* @import  'app/assets/stylesheets/page.scss'; */
 .yandex_map {
     height: 700px;
     margin-bottom: 0.8em;

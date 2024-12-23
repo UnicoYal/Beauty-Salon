@@ -1,0 +1,45 @@
+volumes:
+  postgres_volume:
+  gem_cache:
+
+services:
+  x-backend:
+    build: .
+    env_file:
+      - .env
+    restart: on-failure:3
+    ports:
+      - 3000:3000
+    command: bundle exec puma -C config/puma.rb
+    environment:
+      DB_HOST: db
+      DB_USER: user
+      DB_PASSWORD: user
+      DB_NAME: beauty
+    depends_on:
+      - db
+    volumes:
+      - .:/backend
+      - gem_cache:/usr/local/bundle/gems
+    networks:
+      - rolano
+
+  db:
+    image: postgres:14-alpine3.17
+    environment:
+      - "POSTGRES_DB=${PG_DATABASE_NAME}"
+      - "POSTGRES_USER=${PG_USER}"
+      - "POSTGRES_PASSWORD=${PG_PASSWORD}"
+      - "POSTGRES_HOST=${PG_PASSWORD}"
+      - "POSTGRES_HOST=db"
+    ports:
+      - "${PG_PORT}:5432"
+    volumes:
+      - "postgres_volume:/var/lib/postgresql/data"
+    networks:
+      - rolano
+
+networks:
+  rolano:
+    external:
+      name: rolano

@@ -87,4 +87,9 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  database: beauty_salon
+  encoding: unicode
+  host: db
+  pool: 5
+  username: user
+  password: user

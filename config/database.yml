@@ -27,7 +27,7 @@ development:
   encoding: unicode
   host: localhost
   pool: 5
-  username: postgres
+  username: unicoyal
   password: Igor310304
 
 
